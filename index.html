@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        I am a backend C++ developer with 2.5 year of experience working with structural engineering feild. I have 4 year experience in Android Development using Java, Firebase, and Google Map to build Realtime applications, and also has 4 year hands on experience in Python Development.
+                        I am a backend C++ developer with <span id="exp_in_year_1"></span>  year of experience working with structural engineering feild. I have 4 year experience in Android Development using Java, Firebase, and Google Map to build Realtime applications, and also has 4 year hands on experience in Python Development.
                     </p>
 
                 	</br>
@@ -118,11 +118,11 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="July 2019 – Present">
+            <div data-date="July 2018 – Present">
                 <h3>Kefas Softwares</h3>
                 <h4>Associate Software Developer</h4>
                 <p>
-                    C++ software developer with 2.5 year of experience in structural engineering feild. 
+                    C++ software developer with <span id="exp_in_year_2"></span> year of experience in structural engineering feild. 
                 </p>
             </div>
 
@@ -365,7 +365,7 @@ map.</li>
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2020 ANOOP P
+                        Copyright &copy; <span id="year"></span> ANOOP P
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -405,3 +405,26 @@ map.</li>
 </body>
 
 </html>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+	// a and b are javascript Date objects
+	function dateDiffInDays(a, b) {
+	  // Discard the time and time-zone information.
+	  const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+	  const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+	  return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+	}
+
+	// test it
+	const a = new Date("2018-07-09"),
+		  b = new Date(),
+		  difference = dateDiffInDays(a, b);
+		  
+	document.getElementById("exp_in_year_1").innerHTML = parseFloat(difference/365).toFixed(1);
+	document.getElementById("exp_in_year_2").innerHTML = parseFloat(difference/365).toFixed(1);
+	
+</script>
