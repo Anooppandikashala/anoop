@@ -1,506 +1,645 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anoop P - Software Developer Portfolio</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/styles.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AP</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <!-- <li>
-                <a href="#experience">Experience</a>
-            </li> -->
-            <li>
-                <a href="#education">Education</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+    </nav>
 
-    <div id="lead">
-
-        <div class="highlight-lead-content" id="lead-content">
-            <h1>Anoop P</h1>
-            <h2>Associate Software Developer</h2>
-            <a href="https://drive.google.com/file/d/1qhexf2kRsoNEo4ySK-4O6P2dxbbmjEXH/view?usp=sharing" class="btn-rounded-white" target="_blank">Download Resume</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
         </div>
-        <!-- End #lead-content -->
+        <div id="lead">
+            <div id="lead-content">
+                <h1>Anoop P</h1>
+                <h2 >Associate Software Developer</h2>
+                <h3 class="typing-animation">Associate Software Developer</h3>
+                <a href="https://drive.google.com/file/d/1qhexf2kRsoNEo4ySK-4O6P2dxbbmjEXH/view?usp=sharing" class="btn-rounded-white" target="_blank">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
 
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+            <div id="lead-down" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-sidebar">
+            <a href="https://anooptube.in/blog/" target="_blank" class="social-link">
+                <i class="fas fa-rss"></i>
+            </a>
+            <a href="https://github.com/Anooppandikashala" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anooppandikashala/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/anoop.pandikashala" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/anoop_p_krishnan/" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/anooptube" target="_blank" class="social-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        
+        <!-- <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div> -->
+    </section>
 
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <!-- The social media icon bar -->
-    <div class="icon-bar shadow">
-        <a class="rss" href="https://anooptube.in/blog/" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
-        <a class="twitter" href="https://github.com/Anooppandikashala" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a class="linkedin" href="https://www.linkedin.com/in/anooppandikashala/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a class="facebook" href="https://www.facebook.com/anoop.pandikashala" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a class="instagram" href="https://www.instagram.com/anoop_p_krishnan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a class="youtube" href="https://www.youtube.com/anooptube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-    </div>
-
-    <div id="about">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        <span class="highlight-about">I am a backend C++ developer with <span id="exp_in_year_1"></span> years of industry experience in the structural engineering field.
-                        </br>I work on a cloud-based application that automatically engineers and details connections between structural elements (beams, girders, etc.) 
-                        to generate the most appropriate connection elements (shear plates, double angles, etc.).</span>
-                        </br>Additionally, I have 4 years of experience in Android development using the Flutter framework, 
-                        Java, Firebase, and Google Maps to build real-time applications. 
-                        I also have 4 years of hands-on experience in Python development.
-                    </p>
-                    </br>
-                    <p>
-                        <span class="highlight"><b>First Rank holder B-Tech Information Technology</b></span> 2014-2018 Batch Calicut University
-                    </p>
-                    </br>
-                    <p>
-                        <u>Published a conference paper </u>: <br> <b>"Bus Travel Guide Using GPS"</b> on <i>INTERNATIONAL JOURNAL OF RESEARCH IN ELECTRONICS AND COMPUTER ENGINEERING (IJRECE)</i>
-                    </p>
-
-                    <a type="button" href="https://drive.google.com/open?id=1lo13VDV_myCGIvHGwmmSx_Y1a_tSq3-g" role="button" aria-pressed="true" class="btn btn-outline-info btn-lg " target="_blank">Download Paper </a>
-
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Get to know me better</div>
             </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="skills" class="background-alt">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>C++</li>
-            <li>STL C++ Libraries</li>
-            <li>Linux</li>
-            <li>MySQL</li>
-            <li>PHP</li>
-            <li>HTML/JS</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>Flutter</li>
-            <li>Android</li>
-            <li>Java</li>
-            <li>Dart</li>
-        </ul>
-    </div>
-    <!-- End #skills 
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="July 2018 – Present">
-                <h3>Kefas Softwares</h3>
-                <h4>Associate Software Developer</h4>
-                <p>
-                    C++ software developer with <span id="exp_in_year_2"></span> year of experience in structural engineering feild. 
-                </p>
-            </div>
-
-            <div data-date="2020 – Present">
-                <h3>Freelance </h3>
-                <h4>Flutter Framework</h4>
-                <p>
-                    Android Application development with Flutter Framework with REST-API.
-                </p>
-            </div>
-
-            <div data-date="2015 – Present">
-                <h3>Freelance </h3>
-                <h4>Android Application Development</h4>
-                <p>
-                    Android realtime application development with Firebase, Google Map, MySQL and PHP.
-                </p>
-            </div>
-
-            <div data-date="2015 – Present">
-                <h3>Freelance </h3>
-                <h4>Python Development</h4>
-                <p>
-                    Python application development with PyQt and MySQL. 
-                </p>
-                <p>
-                    Python Machine Learning application development with Tenserflow and Keras. 
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Calicut</h3>
-            <span class="education-date">June 2014 - March 2018</span>
-            <h4>B-Tech Information Technology</h4>
-
-            <ul>
-                <li>
-                    College : Govt. Engineering College Palakkad.
-                </li>
-                <li>
-                    CGPA : 8.57 out of 10.
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Sabary PTB Higher Secondary School</h3>
-            <span class="education-date">June 2012 - March 2014</span>
-            <h4>+2 - Computer Science</h4>
-            <ul>
-                <li>
-                    Percentage 91%
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-        <div class="education-block">
-            <h3>Sabary PTB High School</h3>
-            <span class="education-date">June 2011 - March 2012</span>
-            <h4>SSLC</h4>
-            <ul>
-                <li>
-                    Percentage Full A+ (95%)
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/av.png" />
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Backend Developer</h3>
+                            <p>I am a backend C++ developer with <span id="exp_in_year_1" class="highlight"></span> years of industry experience in the structural engineering field. I work on cloud-based applications that automatically engineer and detail connections between structural elements.</p>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Mobile Developer</h3>
+                            <p>Additionally, I have 4 years of experience in Android development using Flutter framework, Java, Firebase, and Google Maps to build real-time applications.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-python"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Python Developer</h3>
+                            <p>I also have 4 years of hands-on experience in Python development for various applications and machine learning projects.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievements">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>First Rank Holder</h4>
+                            <p>B-Tech Information Technology<br>2014-2018 Batch Calicut University</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Published Research</h4>
+                            <p>"Bus Travel Guide Using GPS"<br>International Journal of Research in Electronics and Computer Engineering</p>
+                            <a href="https://drive.google.com/open?id=1lo13VDV_myCGIvHGwmmSx_Y1a_tSq3-g" 
+                               class="btn btn-outline" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Paper
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-subtitle">Technologies I work with</div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend & Systems</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-cuttlefish"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>STL Libraries</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Mobile & Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-subtitle">Some of my recent work</div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/av.png" alt="AV-Invoice" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
                         <h3>AV-Invoice</h3>
-                        <p>
-                            <ul>
-                                <li>Developed Invoice Creation Website</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Exclusively for Small Shops and Inventories.</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>PHP Application & MySQL</li>
-                            </ul>
-                        </p>
-
-                        <!-- <a href="https://github.com/Anooppandikashala/GEC_SFI">View Project</a> -->
+                        <p>Invoice Creation Website exclusively for Small Shops and Inventories. Built with PHP and MySQL for efficient business management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Web App</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
 
-                <div class="project shadow-large">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/blooddrop.jpg" />
+                        <img src="images/blooddrop.jpg" alt="Blood Drop" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.anoop.myprojects.bloodbank" 
+                                   class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
-                        <h3>Blood Drop Android Application</h3>
-                        <p>
-                            <ul>
-                                <li>Developed a android application for College</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Application available on Play store (Blood Drop Gec)</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Android Application & Firebase</li>
-                            </ul>
-                        </p>
-
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.anoop.myprojects.bloodbank">View on Google Play</a>
-                        </br>
-                        <!-- <a href="https://github.com/Anooppandikashala/GEC_SFI">View Project</a> -->
+                    <div class="project-content">
+                        <h3>Blood Drop Android App</h3>
+                        <p>College blood bank management application available on Play Store. Connects donors with recipients in emergency situations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/todo.png" />
+                        <img src="images/todo.png" alt="ToDo App" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.anoop.myprojects.todoapp" 
+                                   class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
+                    <div class="project-content">
                         <h3>ToDo Android Application</h3>
-                        <p>
-                            <ul>
-                                <li>Developed ToDo App for Android</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Application available on Play store (ToDo)</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Android Application & Sqlite</li>
-                            </ul>
-                        </p>
-
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.anoop.myprojects.todoapp">View on Google Play</a>
-                        </br>
-                        <!-- <a href="https://github.com/Anooppandikashala/GEC_SFI">View Project</a> -->
+                        <p>Productivity app for task management with local storage. Clean interface for organizing daily tasks and activities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
 
-
-                <div class="project shadow-large">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/gmate.jpg" />
+                        <img src="images/gmate.jpg" alt="G Mate" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=anoop.myprojects.gec_sfi" 
+                                   class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Anooppandikashala/GEC_SFI" 
+                                   class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
-                        <h3>G Mate Android Application</h3>
-                        <p>
-                            <ul>
-                                <li>Developed a android application for College</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Application available on Play store (Gmate)</li>
-                            </ul>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>Android Application & Firebase</li>
-                            </ul>
-                        </p>
-
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=anoop.myprojects.gec_sfi">View on Google Play</a>
-                        </br>
-                        <a target="_blank" href="https://github.com/Anooppandikashala/GEC_SFI">View Project</a>
+                    <div class="project-content">
+                        <h3>G Mate Android App</h3>
+                        <p>College community application for students. Features include announcements, events, and student interaction platform.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Real-time</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/invento.jpg" />
+                        <img src="images/mybus.jpg" alt="Bus Travel Guide" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://drive.google.com/open?id=1lo13VDV_myCGIvHGwmmSx_Y1a_tSq3-g" 
+                                   class="project-link" target="_blank">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
-                        <h3>Invento 18 Android application</h3>
-                        <p>
-                            <ul>
-                                <li>Developed a android application for College tech-fest 2018</li>
-                                <li>Application available on Play store (Invento-18)</li>
-                                <li>Android Application & Firebase</li>
-                            </ul>
-                        </p>
-
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=org.invento.sebinvincent.invento">View on Google Play</a></br>
-                        <a target="_blank" href="https://github.com/Anooppandikashala/INVENTO">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/mybus.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
+                    <div class="project-content">
                         <h3>Bus Travel Guide Using GPS</h3>
-                        <p>
-                            <ul>
-                                <li>Developed a public transportation system using mobile application.</li>
-                                <li>Using Conductor’s phones location and GPS.</li>
-                                <li>College Main Project : Android Application & MySQL Server</li>
-                            </ul>
-                        </p>
-                        <a href="https://drive.google.com/open?id=1lo13VDV_myCGIvHGwmmSx_Y1a_tSq3-g" target="_blank" >View Project Paper</a>
+                        <p>Public transportation system using mobile application with real-time GPS tracking. Main college project with published research paper.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">GPS</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/book.jpg" />
+                        <img src="images/book.jpg" alt="Book Recommendation" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Anooppandikashala/Book_Recommendation_System" 
+                                   class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
+                    <div class="project-content">
                         <h3>Book Recommendation System</h3>
-                        <ul>
-                            <li>Developed a Book recommendation system using sentiment analysis and K-Means clustering.</li>
-                            <li>College Mini Project : Python & PyQt4.</li>
-
-                        </ul>
-                        <a target="_blank" href="https://github.com/Anooppandikashala/Book_Recommendation_System">View Project</a>
+                        <p>ML-based recommendation system using sentiment analysis and K-Means clustering for personalized book suggestions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">PyQt4</span>
+                        </div>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/hospital.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info" align="justify">
-                        <h3>Nearest Hospital Locator</h3>
-                        <ul>
-                            <li>Developed an android application that displays nearest hospitals at given location.</li>
-                            <li>Hobby Project : Android Application & Google map.
-                            </li>
-
-                        </ul>
-                        <a target="_blank" href="https://github.com/Anooppandikashala/NearestHospitalLocator">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
             </div>
         </div>
-    </div>
-    <!-- End #projects -->
+    </section>
 
-    <!-- <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </div> -->
-
-    <!-- End #contact -->
-
-    <footer>
+    <!-- Education Section -->
+    <section id="education" class="education">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="year"></span> ANOOP P
-                    </p>
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="section-subtitle">My academic journey</div>
+            </div>
+            
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">2014 - 2018</div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>B-Tech Information Technology</h3>
+                            <h4>University of Calicut</h4>
+                            <div class="education-info">
+                                <p><strong>College:</strong> Govt. Engineering College Palakkad</p>
+                                <p><strong>CGPA:</strong> 8.57 out of 10</p>
+                                <div class="achievement-badge">First Rank Holder</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
+                
+                <div class="education-item">
+                    <div class="education-date">2012 - 2014</div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>+2 Computer Science</h3>
+                            <h4>Sabary PTB Higher Secondary School</h4>
+                            <div class="education-info">
+                                <p><strong>Percentage:</strong> 91%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-5 social">
+                
+                <div class="education-item">
+                    <div class="education-date">2011 - 2012</div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>SSLC</h3>
+                            <h4>Sabary PTB High School</h4>
+                            <div class="education-info">
+                                <p><strong>Percentage:</strong> Full A+ (95%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anoop P</h3>
+                    <p>Associate Software Developer passionate about creating innovative solutions in backend development and mobile applications.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li>
-                            <a href="https://anooptube.in/blog" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Anooppandikashala" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/anooppandikashala/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/anoop.pandikashala" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/anoop_p_krishnan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/anooptube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                        </li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Me</h4>
+                    <div class="footer-social">
+                        <a href="https://anooptube.in/blog/" target="_blank">
+                            <i class="fas fa-rss"></i>
+                        </a>
+                        <a href="https://github.com/Anooppandikashala" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anooppandikashala/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/anoop.pandikashala" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/anoop_p_krishnan/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/anooptube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Anoop P. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Set current year
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        
+        // Calculate experience
+        const startDate = new Date("2018-07-09");
+        const currentDate = new Date();
+        const experience = ((currentDate - startDate) / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
+        document.getElementById("exp_in_year_1").innerHTML = experience;
+        
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.about-card, .skill-category, .project-card, .education-item').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Typing animation effect
+        const typingElement = document.querySelector('.typing-animation');
+        const roles = ['Backend C++ Developer', 'Android Developer', 'Python Developer'];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentRole.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+            
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeRole, speed);
+        }
+        
+        // Start typing animation after page load
+        setTimeout(typeRole, 1000);
+    </script>
 </body>
-
 </html>
-
-<script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-
-    // a and b are javascript Date objects
-    function dateDiffInDays(a, b) {
-        // Discard the time and time-zone information.
-        const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
-        const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
-
-        return Math.floor((utc2 - utc1) / _MS_PER_DAY);
-    }
-
-    // test it
-    const a = new Date("2018-07-09"),
-        b = new Date(),
-        difference = dateDiffInDays(a, b);
-
-    document.getElementById("exp_in_year_1").innerHTML = parseFloat(difference / 365).toFixed(1);
-    document.getElementById("exp_in_year_2").innerHTML = parseFloat(difference / 365).toFixed(1);
-</script>
